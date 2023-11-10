@@ -1,0 +1,486 @@
+object Form1: TForm1
+  Left = 506
+  Height = 599
+  Top = 399
+  Width = 1111
+  Anchors = []
+  Caption = 'Scanner Screen - Version 2.64MAC  - By Von Wallace'
+  ClientHeight = 599
+  ClientWidth = 1111
+  Color = clWhite
+  DefaultMonitor = dmPrimary
+  Menu = MainMenu1
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '1.2.2.0'
+  object StringGridRealTimeGrid: TStringGrid
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = StaticTextchannelname
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = GroupBoxSettings
+    Left = 0
+    Height = 406
+    Top = 40
+    Width = 1111
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    FixedCols = 0
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goDblClickAutoSize, goSmoothScroll]
+    PopupMenu = PopupMenu1
+    RowCount = 1
+    TabOrder = 6
+    Visible = False
+  end
+  object statictexttime: TStaticText
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 0
+    Height = 3
+    Top = 5
+    Width = 1111
+    Alignment = taCenter
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    BorderSpacing.Top = 5
+    BorderStyle = sbsSunken
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -80
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+  end
+  object StaticTextsystemname: TStaticText
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = StaticTextFreq
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 0
+    Height = 3
+    Top = 21
+    Width = 1111
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    BorderSpacing.Top = 5
+    BorderStyle = sbsSunken
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -37
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 1
+  end
+  object StaticTextdepartmentname: TStaticText
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = StaticTextsystemname
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 0
+    Height = 3
+    Top = 29
+    Width = 1111
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    BorderSpacing.Top = 5
+    BorderStyle = sbsSunken
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -37
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 2
+  end
+  object StaticTextchannelname: TStaticText
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = StaticTextdepartmentname
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 0
+    Height = 3
+    Top = 37
+    Width = 1111
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    BorderSpacing.Top = 5
+    BorderStyle = sbsSunken
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -37
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 3
+  end
+  object StaticTextFreq: TStaticText
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = statictexttime
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 0
+    Height = 3
+    Top = 13
+    Width = 1111
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    BorderSpacing.Top = 5
+    BorderStyle = sbsSunken
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -37
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = StaticTextFreqClick
+    ParentFont = False
+    TabOrder = 4
+  end
+  object GroupBoxSettings: TGroupBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = StaticTextchannelname
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 148
+    Top = 451
+    Width = 1111
+    Anchors = [akLeft, akRight, akBottom]
+    AutoSize = True
+    BorderSpacing.Top = 5
+    ClientHeight = 141
+    ClientWidth = 1103
+    Color = clWhite
+    ParentColor = False
+    TabOrder = 5
+    object GroupBox2: TGroupBox
+      Left = 260
+      Height = 141
+      Top = 0
+      Width = 232
+      Caption = 'Raw Data'
+      ClientHeight = 119
+      ClientWidth = 224
+      Color = clWhite
+      ParentColor = False
+      TabOrder = 0
+      object Memo1: TMemo
+        Left = 6
+        Height = 53
+        Top = 3
+        Width = 215
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Name = 'Arial Narrow'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 0
+      end
+      object CheckBoxlogdata: TCheckBox
+        Left = 6
+        Height = 18
+        Top = 60
+        Width = 76
+        Caption = 'Log Data'
+        TabOrder = 1
+      end
+      object Label7: TLabel
+        Left = 84
+        Height = 16
+        Top = 61
+        Width = 136
+        Caption = '(Saved in Documents)'
+        ParentColor = False
+      end
+    end
+    object GroupBox3: TGroupBox
+      Left = 860
+      Height = 141
+      Top = 0
+      Width = 240
+      Caption = 'Text to Speech'
+      ClientHeight = 119
+      ClientWidth = 232
+      Color = clWhite
+      ParentColor = False
+      TabOrder = 1
+      object TrackBarRate: TTrackBar
+        Left = 46
+        Height = 25
+        Top = 32
+        Width = 136
+        Max = 220
+        Min = 180
+        OnChange = TrackBarRateChange
+        Position = 200
+        TabOrder = 0
+      end
+      object Label2: TLabel
+        Left = 14
+        Height = 16
+        Top = 32
+        Width = 28
+        Caption = 'Rate'
+        ParentColor = False
+      end
+      object LabelRate: TLabel
+        Left = 190
+        Height = 16
+        Top = 32
+        Width = 17
+        Caption = '(0)'
+        ParentColor = False
+      end
+      object Label3: TLabel
+        Left = 16
+        Height = 16
+        Top = 67
+        Width = 191
+        Caption = '(200 = Normal rate of speech)'
+        ParentColor = False
+      end
+      object CheckBoxtexttospeech: TCheckBox
+        Left = 14
+        Height = 18
+        Top = 8
+        Width = 158
+        Caption = 'Enable Text to Speech'
+        TabOrder = 1
+      end
+    end
+    object GroupBox4: TGroupBox
+      Left = 0
+      Height = 141
+      Top = 0
+      Width = 252
+      Caption = 'Communications'
+      ClientHeight = 119
+      ClientWidth = 244
+      Color = clWhite
+      ParentColor = False
+      TabOrder = 2
+      object Label1: TLabel
+        Left = 6
+        Height = 16
+        Top = 8
+        Width = 41
+        Caption = 'Device'
+        ParentColor = False
+      end
+      object Buttonconnecttoscanner: TButton
+        Left = 6
+        Height = 25
+        Top = 58
+        Width = 164
+        Caption = 'Connect to Scanner'
+        OnClick = ButtonconnecttoscannerClick
+        TabOrder = 0
+      end
+      object Buttondisconnectfromscanner: TButton
+        Left = 6
+        Height = 25
+        Top = 84
+        Width = 164
+        Caption = 'Disconnect from Scanner'
+        Enabled = False
+        OnClick = ButtondisconnectfromscannerClick
+        TabOrder = 1
+      end
+      object ComboBoxcomport: TComboBox
+        Left = 64
+        Height = 20
+        Top = 8
+        Width = 168
+        ItemHeight = 0
+        OnDropDown = ComboBoxcomportDropDown
+        ParentBidiMode = False
+        ParentShowHint = False
+        ShowHint = True
+        Style = csDropDownList
+        TabOrder = 2
+      end
+      object Label8: TLabel
+        Left = 6
+        Height = 16
+        Top = 35
+        Width = 50
+        Caption = 'Scanner'
+        ParentColor = False
+      end
+      object ComboBoxScanner: TComboBox
+        Left = 64
+        Height = 20
+        Top = 34
+        Width = 168
+        ItemHeight = 0
+        Items.Strings = (
+          '396/996/436/536'
+          'HP-1'
+        )
+        Style = csDropDownList
+        TabOrder = 3
+      end
+    end
+    object GroupBox5: TGroupBox
+      Left = 500
+      Height = 141
+      Top = 0
+      Width = 352
+      Caption = 'Display'
+      ClientHeight = 119
+      ClientWidth = 344
+      Color = clWhite
+      ParentColor = False
+      TabOrder = 3
+      object TrackBarfontheight: TTrackBar
+        Left = 6
+        Height = 25
+        Top = 30
+        Width = 120
+        Max = 190
+        Min = 10
+        OnChange = TrackBarfontheightChange
+        Position = 55
+        TabOrder = 0
+      end
+      object Labelfontheight: TLabel
+        Left = 134
+        Height = 16
+        Top = 34
+        Width = 17
+        Caption = '(0)'
+        ParentColor = False
+      end
+      object Label4: TLabel
+        Left = 6
+        Height = 16
+        Top = 6
+        Width = 74
+        Caption = 'Font Height'
+        ParentColor = False
+      end
+      object CheckBoxstayontop: TCheckBox
+        Left = 14
+        Height = 18
+        Top = 61
+        Width = 147
+        Caption = 'Window Stay on Top'
+        OnChange = CheckBoxstayontopChange
+        TabOrder = 1
+        Visible = False
+      end
+      object ColorBoxwindow: TColorBox
+        Left = 238
+        Height = 20
+        Top = 6
+        Width = 100
+        DefaultColorColor = clWhite
+        NoneColorColor = clWhite
+        Selected = clWhite
+        ItemHeight = 16
+        OnChange = ColorBoxwindowChange
+        TabOrder = 2
+      end
+      object Label5: TLabel
+        Left = 150
+        Height = 16
+        Top = 6
+        Width = 87
+        Caption = 'Window Color'
+        ParentColor = False
+      end
+      object ColorBoxfont: TColorBox
+        Left = 238
+        Height = 20
+        Top = 36
+        Width = 100
+        ItemHeight = 16
+        OnChange = ColorBoxfontChange
+        TabOrder = 3
+      end
+      object Label6: TLabel
+        Left = 170
+        Height = 16
+        Top = 34
+        Width = 66
+        Caption = 'Font Color'
+        ParentColor = False
+      end
+    end
+  end
+  object Timerprobescanner: TTimer
+    Enabled = False
+    Interval = 500
+    OnTimer = TimerprobescannerTimer
+    left = 696
+    top = 288
+  end
+  object TimerClock: TTimer
+    OnTimer = TimerClockTimer
+    left = 232
+    top = 400
+  end
+  object MainMenu1: TMainMenu
+    left = 96
+    top = 83
+    object MenuItem4: TMenuItem
+      Caption = 'View'
+      object MenuItemRealTimeGrid: TMenuItem
+        AutoCheck = True
+        Caption = 'Real-time Log'
+        OnClick = MenuItemRealTimeGridClick
+      end
+      object MenuItemSettingsPanel: TMenuItem
+        AutoCheck = True
+        Caption = 'Settings Panel'
+        Checked = True
+        Default = True
+        OnClick = MenuItemSettingsPanelClick
+      end
+    end
+    object MenuItem1: TMenuItem
+      Caption = 'Settings'
+      object MenuItemSaveSettings: TMenuItem
+        Caption = 'Save Settings'
+        OnClick = MenuItemSaveSettingsClick
+      end
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'Help'
+      object MenuItemcodes: TMenuItem
+        Caption = 'CODES'
+        OnClick = MenuItemcodesClick
+      end
+      object MenuItemDonate: TMenuItem
+        Caption = 'Donate'
+        OnClick = MenuItemDonateClick
+      end
+      object MenuItemAbout: TMenuItem
+        Caption = 'About'
+        OnClick = MenuItemAboutClick
+      end
+    end
+  end
+  object PopupMenu1: TPopupMenu
+    left = 429
+    top = 207
+    object MenuItemclearlog: TMenuItem
+      Caption = 'Clear Log'
+      OnClick = MenuItemclearlogClick
+    end
+  end
+end
